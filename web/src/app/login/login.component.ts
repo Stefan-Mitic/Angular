@@ -13,6 +13,7 @@ c
   }
 
   loginUser(event){
+    event.preventDefault(); // prevents page from reloading
     console.log(event);
   }
 
