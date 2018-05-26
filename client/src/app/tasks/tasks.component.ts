@@ -12,7 +12,7 @@ export class TasksComponent implements OnInit {
   title: string;
 
   constructor(private taskService: TaskService) {
-    this.taskService.getTasks.subscribe(tasks => {
+    this.taskService.getTasks().subscribe(tasks => {
       this.tasks = tasks;
     })
   }
