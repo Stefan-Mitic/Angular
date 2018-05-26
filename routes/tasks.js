@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://Danilo:govno@ds047666.mlab.com:47666/mytasklist_brad', ['tasks']);
+var db = mongojs('mongodb://Danilo:govno@ds235840.mlab.com:35840/moss', ['tasks']);
+
 
 // Get All Tasks
 router.get('/tasks', function(req, res, next){
@@ -78,3 +79,5 @@ router.put('/task/:id', function(req, res, next){
     });
   }
 });
+
+module.exports = router;

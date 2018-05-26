@@ -4,6 +4,9 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { BrowserXhr } from '@angular/http';
+import {CustExtBrowserXhr} from '../../cust-ext-browser-xhr';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { TasksComponent } from './tasks/tasks.component';
     HttpModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: BrowserXhr, useClass:CustExtBrowserXhr},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
