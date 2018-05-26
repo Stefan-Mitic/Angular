@@ -1,12 +1,21 @@
+import { HttpClientModule } from "@angular/common/http";
 import { Injectable } from '@angular/core';
-import { HttpClientModule} from "@angular/common/http";
+
+interface myData {
+  success: boolean,
+  message: string
+}
+
+interface registerResponse {
+  success: boolean
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClientModule) { }
+  constructor(private http: HttpClient) { }
 
   getUserDetails(username, password){
     // Post these details if user info is correct
@@ -15,5 +24,12 @@ export class AuthService {
       username,
       password
     });
+  }
+
+  registerUser(username, password) {
+    return this.http.post<registerResponse>('/api/register', {
+      username,
+      password
+    })
   }
 }

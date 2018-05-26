@@ -8,13 +8,17 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AdminComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,14 @@ import {RouterModule} from '@angular/router';
       {
         path: 'admin',
         component: AdminComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
       },
       {
         path: '',
