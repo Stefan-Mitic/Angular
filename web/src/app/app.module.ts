@@ -21,7 +21,7 @@ import {RouterModule} from '@angular/router';
     HttpClientModule,
     RouterModule.forRoot([
       {
-        path: '',
+        path: 'login',
         component: LoginComponent
       },
       {
@@ -29,7 +29,7 @@ import {RouterModule} from '@angular/router';
         component: AdminComponent
       },
       {
-        path: 'admin',
+        path: '',
         component: HomeComponent
       }
     ])
