@@ -1,0 +1,25 @@
+{
+  "name": "ruhacks",
+  "version": "1.0.0",
+  "description": "simple task manager",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djoksimo/RUHacks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djoksimo/RUHacks/issues"
+  },
+  "homepage": "https://github.com/djoksimo/RUHacks#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongojs": "^2.5.0"
+  }
+}
